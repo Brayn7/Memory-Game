@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Overpass+Mono:300');
+
+
+body {
+   font-family: 'Overpass Mono', monospace;
+   text-align: center;
+   color: rgb(251, 94, 94);
+   user-select: none;
+}
+
+#scoreBoard * {
+   display: inline-block;
+   text-align: center;
+   margin-bottom: 0;
+}
+
+#scoreBoard > div {
+   margin: 0 50px 25px;
+   padding: 0 10px;
+}
+
+.playing {
+   border-bottom: 3px solid rgb(251, 94, 94);
+}
+
+.shuffle {
+    z-index: 1000;
+    position: relative;
+    width: 101px;
+}
+
+.shuffle h4 {
+   margin: 0;
+   padding: 8px 15px;
+   border:1px solid rgb(251, 94, 94);
+   box-shadow: 0px 4px 10px #999;
+}
+
+.shuffle h4:hover {
+   background: rgb(251, 94, 94);
+   color: white;
+   border: 1px solid white;
+   box-shadow: 0px 4px 10px #999;
+}
+
+.shuffle h4:active {
+   box-shadow: none;
+}
+
+#cards {
+    margin: auto;
+    width: 800px;
+    text-align: -webkit-center;
+}
+
+.card {
+    display: inline-block;
+    width: 68px;
+    height: 93.5px;
+    border-radius: 5px;
+    margin: .4% .5%;
+    background: rgb(251, 94, 94);
+    vertical-align: middle;
+    box-shadow: 5px 2px 6px #999;
+}
+
+.card:active {
+   box-shadow: none;
+}
+
+.card img {
+    width: 100%;
+}
+
+#modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+#innerModal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 100px;
+    background: white;
+}
+

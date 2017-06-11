@@ -1,0 +1,6 @@
+
+  <div id="cards">
+    <div ng-click="$ctrl.cards.reveal(card)" class="card" ng-repeat="card in $ctrl.cards.data | filter: '!ACE' ">
+      <img ng-hide="!card.flipped" src="{{card.image}}" alt="{{card.value}} of {{card.suit}}">
+    </div>
+  </div>

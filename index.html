@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html  lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Card Matching Game</title>
+    <link rel="stylesheet" href="./components/cards/cards.css">
+  </head>
+  <body>
+    <div ng-app="cards" ng-controller="cardsController as ctrl">
+      <div id="scoreBoard">
+        <div ng-class="{playing:ctrl.cards.turn}" class="player" id="player1">
+          <h2>P1:</h2>
+          <h2 class="score">{{ctrl.cards.player1.length}}</h2>
+        </div>
+        <div class="shuffle">
+          <h4 ng-hide="ctrl.cards.gameOver == false" ng-click="ctrl.cards.shuffle()">Shuffle</h4>
+        </div>
+        <div ng-class="{playing:!ctrl.cards.turn}" class="player" id="player2">
+          <h2>P2:</h2>
+          <h2 class="score">{{ctrl.cards.player2.length}}</h2>
+        </div>
+      </div>
+      <cardscomp cards="ctrl.cards"></cardscomp>
+      <div ng-hide="ctrl.cards.gameOver == false" id="modal">
+        <div id="innerModal">
+          <h1>{{ctrl.cards.winner}}</h1>
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="./components/cards/cards.js"></script>
+    <script src="./components/cards/cardService.js"></script>
+    <script src="./components/cards/cards.controller.js"></script>
+    <script src="./components/cards/cards.component.js"></script>
+  </body>
+</html>
