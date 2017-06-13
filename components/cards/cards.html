@@ -1,4 +1,3 @@
-
   <div id="cards">
     <div ng-class="{front:card.flipped, unflip:!card.flipped, finish: $ctrl.cards.gameOver}" ng-click="$ctrl.cards.reveal(card)" class="card" ng-repeat="card in $ctrl.cards.data | filter: '!ACE' ">
       <img class="back" ng-hide="!card.flipped" src="{{card.image}}" alt="{{card.value}} of {{card.suit}}">

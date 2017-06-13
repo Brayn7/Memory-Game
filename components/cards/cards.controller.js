@@ -101,7 +101,7 @@ cardsModule.controller('cardsController', ['$scope', 'cardService', '$timeout', 
     };
 
     ctrl.cards.isTerminal = function(){
-      if (ctrl.cards.player1.length + ctrl.cards.player2.length === 2){
+      if (ctrl.cards.player1.length + ctrl.cards.player2.length === 24){
          ctrl.cards.gameOver = true;
          ctrl.cards.determineWinner();
       }
@@ -112,7 +112,7 @@ cardsModule.controller('cardsController', ['$scope', 'cardService', '$timeout', 
          ctrl.cards.winner = "Player 1 Wins";
       } else if (ctrl.cards.player1.length < ctrl.cards.player2.length) {
          ctrl.cards.winner = "Player 2 Wins";
-      } {
+      } else {
          ctrl.cards.winner = "Draw";
       }
     };
